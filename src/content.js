@@ -77,5 +77,36 @@ I created an Azure Storage account that holds product URL. FitCheck pipeline sta
 The Product Parser Flow reads the stored HTML and extracts size charts, sizes, prices, and images. Fit Engine Flow computes personalized fit scores using my measurements and writes the final FitResults back to Azure Storage. 
 
 A lightweight static Web UI then reads those FitResults and displays items - like XS sweater - ranked by how well they fit me.`
-  }
+  }, 
+  {
+    id: 2,
+    title: '5-Day AI Agents',
+    slug: '5-day-ai-agents', // <-- Internal route key
+    date: 'June 21, 2026',
+    hash: 'e4b8d21',
+    readTime: '4 min',
+    excerpt: 'Intense Vibe Coding Course with Google',
+    snippet: 'Google · Antigravity',
+    // You can write your long-form text directly here using templates or standard strings
+    content: `I recently completed a course on AI agents offered by Google. The podcasts, whitepapers, and tutorials provided a good set of resources to get started.
+    Here are the key points that stayed with me:
+    The analogy drawn between modern software developers and factory managers helped me shift my perspective. 
+    - Financial concerns as vide coding is increasing Operational Expenditure (OpEx). Meanwhile, agentic engineering is more of a captial expenditure (CapEx).
+    - The simplest explanation for MCP: USB-C for AI tools. The use of MCP also brings down complexity from O(N . M) to O(N + M) where N is the number of agents and M is the number of tools.
+    - Skills are agent-triggered (yes, not event-triggered). SKILLS.md tells the agent what the skill is, when to use it, how to execute it. This helps us avoid context staturation.
+    - The comparison between the tranformation from writing source code to using no-code/low-code tools and the transformation from using assembly language to using high-level programming languages was particularly insightful.
+    
+    However, security is major concern as well. Prompt injection attacks can be caused by hardcoding constraints in prompt. Vibe diff is an interesting term. It means the model gives safe vibes, but actual behavior is unsafe.
+    
+    Agent = Model + Harness
+    Harness is the scaffolding around the model that provides structure, tools, constraints, and memory.
+    
+    Context fragmentation is an issue as model loses plot while trying to parse unstructured text. It is recommended for prompts to follow the Gherkin template: Given [context], When [action], Then [outcome]. This way, the model can better understand the structure and relationships between different pieces of information.
+    
+    Evidence prompting: provide raw diagnostic logs.
+    Forensic mode: write a failing unit test that reproduces the bug, then ask the model to fix the code until the test passes.
+    
+    The current bottleneck that we are facing is getting bombarded by requests for approval by the agents. Developers tend to approve as a reflex rather than taking the time to evaluate the request. There is a shocking but not so surprising solution to this.
+    Use AI! "Graph-Native Code Understanding" means using a map of how code connects (a graph) to help AI truly comprehend large software systems at scale.`
+}
 ];
