@@ -16,7 +16,7 @@ export const projectsData = [
     stack: 'Python · PyTorch · OpenCV · FastAPI',
     metric1: '90%+', label1: 'accuracy',
     metric2: '<1s',  label2: 'inference',
-    link: null,
+    link: 'https://shared.ontariotechu.ca/shared/faculty/feas/current-students/capstone-25/20.jpg',
   },
   {
     id: 2,
@@ -32,13 +32,24 @@ export const projectsData = [
   {
     id: 3,
     cat: 'web',
-    tag: 'Systems',
-    title: 'Microservices Migration',
-    desc: 'Rebuilt a government RESTful app and migrated to microservices with Docker + Kubernetes, enabling zero-downtime deploys.',
-    stack: 'Java · Spring Boot · Docker · Kubernetes',
-    metric1: '30%', label1: 'cost reduction',
-    metric2: '25%', label2: 'faster API',
-    link: null,
+    tag: 'Mobile',
+    title: 'Virtual Memory App',
+    desc: 'Designed to assist seniors and individuals with dementia by providing a user-friendly interface to manage memories, reminders, and important information.',
+    stack: 'Java · SQLite · Android',
+    metric1: '30%', label1: 'interaction',
+    metric2: '3', label2: 'sensors',
+    link: 'https://github.com/Jumaana-bit/VirtualMemory',
+  },
+  {
+    id: 4,
+    cat: 'security',
+    tag: 'Software Security',
+    title: 'Secure File Sharing',
+    desc: 'Ensures the safe transfer of files through advanced encryption methods, enforces strict authorization policies, and incorporates role-based access control (RBAC).',
+    stack: 'PyQt · RBAC · Zeroconf',
+    metric1: '256-bit', label1: 'AES-Encryption',
+    metric2: 'ECDH', label2: 'key exchange',
+    link: 'https://github.com/Jumaana-bit/SecureFileSharing',
   },
 ];
 
@@ -90,8 +101,8 @@ A lightweight static Web UI then reads those FitResults and displays items - lik
     // You can write your long-form text directly here using templates or standard strings
     content: `I recently completed a course on AI agents offered by Google. The podcasts, whitepapers, and tutorials provided a good set of resources to get started.
     Here are the key points that stayed with me:
-    The analogy drawn between modern software developers and factory managers helped me shift my perspective. 
-    - Financial concerns as vide coding is increasing Operational Expenditure (OpEx). Meanwhile, agentic engineering is more of a captial expenditure (CapEx).
+    Software Developers are acting more like factory managers now.  
+    - Financial concerns as vibe coding is increasing Operational Expenditure (OpEx). Meanwhile, agentic engineering is more of a captial expenditure (CapEx).
     - The simplest explanation for MCP: USB-C for AI tools. The use of MCP also brings down complexity from O(N . M) to O(N + M) where N is the number of agents and M is the number of tools.
     - Skills are agent-triggered (yes, not event-triggered). SKILLS.md tells the agent what the skill is, when to use it, how to execute it. This helps us avoid context staturation.
     - The comparison between the tranformation from writing source code to using no-code/low-code tools and the transformation from using assembly language to using high-level programming languages was particularly insightful.
@@ -101,7 +112,7 @@ A lightweight static Web UI then reads those FitResults and displays items - lik
     Agent = Model + Harness
     Harness is the scaffolding around the model that provides structure, tools, constraints, and memory.
     
-    Context fragmentation is an issue as model loses plot while trying to parse unstructured text. It is recommended for prompts to follow the Gherkin template: Given [context], When [action], Then [outcome]. This way, the model can better understand the structure and relationships between different pieces of information.
+    Context fragmentation is an issue as the model loses plot while trying to parse unstructured text. It is recommended for prompts to follow the Gherkin template: Given [context], When [action], Then [outcome]. This way, the model can better understand the structure and relationships between different pieces of information.
     
     Evidence prompting: provide raw diagnostic logs.
     Forensic mode: write a failing unit test that reproduces the bug, then ask the model to fix the code until the test passes.

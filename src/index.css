@@ -166,7 +166,21 @@
   .post__title     { font-size: 17px; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; margin-bottom: 10px; cursor: pointer; }
   .post__excerpt   { font-size: 14px; color: var(--slate-500); line-height: 1.65; margin-bottom: 20px; }
   .post__snippet   { background: #f8fafc; border: 1px solid rgba(148,163,184,0.3); border-radius: 8px; padding: 14px 16px; font-family: monospace; font-size: 12px; color: var(--slate-700); overflow-x: auto; }
- 
+ .lab-note-markdown ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.lab-note-markdown li {
+  margin-bottom: 6px;
+}
+
+.lab-note-markdown h3 {
+  margin-top: 24px;
+  font-weight: 600;
+}
+
+
   /* Footer */
   .footer { padding: 0 0 48px; }
   .footer__panel {

@@ -7,7 +7,8 @@ import { projectsData, blogsData } from './content.js';
 const TABS = [
   ['all', 'All projects'],
   ['ai',   'AI / ML'],
-  ['web', 'Systems'],
+  ['web', 'Mobile'],
+  ['security', 'Security'],
 ];
 
 // Pure SVG GitHub Icon Component
@@ -60,8 +61,8 @@ function BlinkingCursor() {
   return <span className={`cursor ${on ? 'cursor--on' : 'cursor--off'}`} />;
 }
 
+// ── FIXED DEDICATED FULL LAB NOTE VIEW ──
 function LabNoteView({ slug, onBack }) {
-  // Find the active blog post based on the current slug route
   const blog = blogsData.find(b => b.slug === slug);
 
   if (!blog) {
@@ -72,6 +73,9 @@ function LabNoteView({ slug, onBack }) {
       </div>
     );
   }
+
+  // Splits string by lines safely
+  const paragraphs = blog.content.split('\n');
 
   return (
     <div className="container--narrow lab-notes">
@@ -98,7 +102,7 @@ function LabNoteView({ slug, onBack }) {
         {blog.excerpt}
       </p>
 
-      {/* Unique Featured Image (Only renders if blog.image exists in content.js) */}
+      {/* Featured Image */}
       {blog.image && (
         <div style={{ marginBottom: '40px', width: '100%', overflow: 'hidden', borderRadius: '12px', border: '1px solid var(--slate-200)' }}>
           <img 
@@ -109,11 +113,39 @@ function LabNoteView({ slug, onBack }) {
         </div>
       )}
 
-      {/* Main Content Body */}
-      <div className="lab-note-markdown" style={{ fontSize: '15px', lineHeight: '1.8', color: 'var(--navy)' }}>
-        <p style={{ whiteSpace: 'pre-line' }}>
-          {blog.content}
-        </p>
+      {/* Structured Content Container */}
+      <div className="lab-note-markdown" style={{ fontSize: '15px', lineHeight: '1.8', color: 'var(--navy)', textAlign: 'left' }}>
+        {paragraphs.map((line, index) => {
+          const trimmed = line.trim();
+
+          // Skip empty spacing
+          if (!trimmed) return <div key={index} style={{ height: '12px' }} />;
+
+          // Process Bullet Points
+          if (trimmed.startsWith('-')) {
+            return (
+              <ul key={index} style={{ margin: '4px 0 4px 20px', listStyleType: 'disc', paddingLeft: '5px' }}>
+                <li style={{ marginBottom: '4px' }}>{trimmed.substring(1).trim()}</li>
+              </ul>
+            );
+          }
+
+          // Process Subheadings & Section Blocks
+          if (trimmed.startsWith('Approach') || trimmed.endsWith(':') || trimmed.startsWith('Agent =')) {
+            return (
+              <h3 key={index} style={{ color: 'var(--slate-800)', marginTop: '24px', marginBottom: '12px', fontSize: '18px', fontWeight: '600' }}>
+                {trimmed}
+              </h3>
+            );
+          }
+
+          // Normal Paragraph Lines
+          return (
+            <p key={index} style={{ marginBottom: '14px' }}>
+              {trimmed}
+            </p>
+          );
+        })}
       </div>
     </div>
   );
@@ -153,7 +185,7 @@ export default function App() {
               <a href="https://www.linkedin.com/in/jumaana-aslam-424b55279/" target="_blank" rel="noopener noreferrer" className="nav__icon-link nav__icon-link--linkedin">
                 <Linkedin size={16} />
               </a>
-              <a href="mailto:jumaana.aslam@gmail.com" className="nav__contact">
+              <a href="mailto:jumaana.aslam@ontariotechu.net" className="nav__contact">
                 Contact
               </a>
             </div>
@@ -180,7 +212,7 @@ export default function App() {
                       </h1>
                       <h1 className="hero__h1-light">& scalable architecture.</h1>
                       <p className="hero__sub">
-                        Software engineer with a focus on ML systems, cloud infrastructure, and full-stack development. Incoming MEng at the University of Toronto.
+                        Software engineer with a focus on ML systems, cloud infrastructure, and full-stack development. MEng Student at the University of Toronto.
                       </p>
                     </div>
                     <div className="hero__canvas">
@@ -197,7 +229,7 @@ export default function App() {
               <div className="ribbon">
                 <div className="container ribbon__inner">
                   <p className="ribbon__label">Engineering Philosophy</p>
-                  <p className="ribbon__text">Disciplined, maintainable systems built on architectural clarity.</p>
+                  <p className="ribbon__text">Uncompromising human intent. Unparalled AI leverage.</p>
                 </div>
               </div>
 
@@ -314,20 +346,12 @@ export default function App() {
               <span className="footer__status-label">Open to opportunities</span>
             </div>
             <div className="footer__right">
-              {[['Next up', 'MEng · University of Toronto'], ['Based in', 'Toronto, Ontario']].map(([label, val]) => (
+              {[['Current', 'MEng · University of Toronto'], ['Based in', 'Toronto, Ontario']].map(([label, val]) => (
                 <div key={label}>
                   <p className="footer__stat-label">{label}</p>
                   <p className="footer__stat-val">{val}</p>
                 </div>
               ))}
-              <div className="footer__social">
-                <a href="https://github.com/Jumaana-bit" target="_blank" rel="noopener noreferrer" className="footer__social-link">
-                  <Github size={15} />
-                </a>
-                <a href="https://www.linkedin.com/in/jumaana-aslam-424b55279/" target="_blank" rel="noopener noreferrer" className="footer__social-link footer__social-link--linkedin">
-                  <Linkedin size={15} />
-                </a>
-              </div>
             </div>
           </div>
         </footer>
