@@ -159,5 +159,52 @@ Any advice/tips?
 A good background or understanding of AI concepts will help a lot. Pay extra attention to ALL the Azure tools/resources/services mentioned in the learning paths. In fact, try it out yourself using the labs.
 
 On the other hand, I found the Google PMLE exam a lot harder than the practice exams.  `
+},
+{id: 4,
+  title: 'Qollab x Ionq Global Hackathon',
+  slug: 'quantum-hackathon', // <-- Internal route key
+  date: 'November 13, 2026',
+  hash: 'a6b7c8d',
+  readTime: '2 min',
+  excerpt: 'My experience at the Qollab x Ionq Global Hackathon.',
+  snippet: 'Quantum Computing',
+  image: '/quantum-hackathon.png',
+  content: ` I registered for the Qollab x IonQ Global Quantum Hackathon.  
+
+  
+
+I had no prior experience with Quantum computing so I started with Qollab tutorials. I managed to build a Hybrid Quantum-Classical Intrusion Detection System with Explainable AI, focused on improving cybersecurity for critical infrastructure.  
+
+  
+
+I combined quantum computing with classical machine learning, using quantum feature maps and kernel-based SVM classification to identify potential cyberattacks. But I wanted to go beyond simply detecting threats. 
+
+  
+
+I integrated a Retrieval-Augmented Generation (RAG) agent that retrieves relevant cybersecurity intelligence from sources such as MITRE ATT&CK, CVE records, and CISA's Known Exploited Vulnerabilities (KEV) catalog to provide contextual explanations for detected threats. 
+
+  
+
+The goal was to make attack detection more transparent and help security analysts better understand why a particular activity may be suspicious. 
+
+  
+
+I used Qiskit's ZZFeatureMap, which applies Hadamard gates, data-dependent phase rotations, and entangling CX gates to encode features and capture relationships between them. 
+
+The workflow is as follows: 
+
+1. Loaded prepared training and testing data (78 features). 
+
+2. Reduced 78 features to 6 features for 6 qubits. 
+
+3. Selected 50 training samples and 20 testing samples per class. 
+
+4. Encoding data into quantum circuits using 6 qubits. 
+
+5. Measure how similar data samples are using quantum circuit fidelity.  
+
+6. Calculate accuracy, precision, recall, and save predictions for the RAG agent. 
+
+Quantum computing always sounded very complicated to me, but I found it surprisingly approachable. The hackathon was a great learning experience and I look forward to exploring more in this field.`
 }
 ];
