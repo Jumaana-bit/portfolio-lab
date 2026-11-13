@@ -165,7 +165,7 @@ On the other hand, I found the Google PMLE exam a lot harder than the practice e
   slug: 'quantum-hackathon', // <-- Internal route key
   date: 'November 13, 2026',
   hash: 'a6b7c8d',
-  readTime: '2 min',
+  readTime: '3 min',
   excerpt: 'My experience at the Qollab x Ionq Global Hackathon.',
   snippet: 'Quantum Computing',
   image: '/quantum-hackathon.png',
@@ -205,6 +205,8 @@ The workflow is as follows:
 
 6. Calculate accuracy, precision, recall, and save predictions for the RAG agent. 
 
-Quantum computing always sounded very complicated to me, but I found it surprisingly approachable. The hackathon was a great learning experience and I look forward to exploring more in this field.`
+Quantum computing always sounded very complicated to me, but I found it surprisingly approachable. The hackathon was a great learning experience and I look forward to exploring more in this field.
+
+You can find the project here: https://qollab.xyz/explore/hackathon-2026/university-of-toronto`
 }
 ];
