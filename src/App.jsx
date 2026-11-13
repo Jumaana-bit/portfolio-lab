@@ -77,6 +77,29 @@ function LabNoteView({ slug, onBack }) {
   // Splits string by lines safely
   const paragraphs = blog.content.split('\n');
 
+  // Helper to automatically convert URLs into clickable links
+  const renderTextWithLinks = (text) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = text.split(urlRegex);
+
+    return parts.map((part, i) => {
+      if (part.match(urlRegex)) {
+        return (
+          <a
+            key={i}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'var(--blue-600, #2563eb)', textDecoration: 'underline' }}
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   return (
     <div className="container--narrow lab-notes">
       {/* Navigation Header */}
@@ -125,13 +148,13 @@ function LabNoteView({ slug, onBack }) {
           if (trimmed.startsWith('-')) {
             return (
               <ul key={index} style={{ margin: '4px 0 4px 20px', listStyleType: 'disc', paddingLeft: '5px' }}>
-                <li style={{ marginBottom: '4px' }}>{trimmed.substring(1).trim()}</li>
+                <li style={{ marginBottom: '4px' }}>{renderTextWithLinks(trimmed.substring(1).trim())}</li>
               </ul>
             );
           }
 
-          // Process Subheadings & Section Blocks
-          if (trimmed.startsWith('Approach') || trimmed.endsWith(':') || trimmed.startsWith('Agent =')) {
+          // Process Subheadings & Section Blocks (Ignore lines with http so URLs don't become headings)
+          if (!trimmed.includes('http') && (trimmed.startsWith('Approach') || trimmed.endsWith(':') || trimmed.startsWith('Agent ='))) {
             return (
               <h3 key={index} style={{ color: 'var(--slate-800)', marginTop: '24px', marginBottom: '12px', fontSize: '18px', fontWeight: '600' }}>
                 {trimmed}
@@ -142,7 +165,7 @@ function LabNoteView({ slug, onBack }) {
           // Normal Paragraph Lines
           return (
             <p key={index} style={{ marginBottom: '14px' }}>
-              {trimmed}
+              {renderTextWithLinks(trimmed)}
             </p>
           );
         })}
