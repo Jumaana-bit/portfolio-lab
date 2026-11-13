@@ -119,5 +119,45 @@ A lightweight static Web UI then reads those FitResults and displays items - lik
     
     The current bottleneck that we are facing is getting bombarded by requests for approval by the agents. Developers tend to approve as a reflex rather than taking the time to evaluate the request. There is a shocking but not so surprising solution to this.
     Use AI! "Graph-Native Code Understanding" means using a map of how code connects (a graph) to help AI truly comprehend large software systems at scale.`
+},
+{
+  id: 3,
+  title: 'Azure AI Fundamentals',
+  slug: 'azure-ai-fundamentals', // <-- Internal route key
+  date: 'August 27, 2026',
+  hash: 'a1b2c3d',
+  readTime: '2.5 min',
+  excerpt: 'Microsoft Azure AI Fundamentals certification journey.',
+  snippet: 'Azure · AI Fundamentals',
+  image: '/AI-901.png',
+  content:
+   ` AI-901: The Fundamentals of AI 
+After completing the AI Skills Path modules, I received a voucher and chose to use it to become certified in AI fundamentals.
+
+How did I plan to study?
+
+Study the two learning paths thoroughly. 
+Dig deeper into the concepts found in the learning paths.
+Do practice tests all day.
+
+Spend 1 - 2 weeks doing that
+
+How did I actually study?
+
+I was under the impression that I could reschedule my exam for free, which is true in a normal case. However, you can not do that with a voucher. I found this out about 48 hours before my exam. I also had to go to university that day. 
+
+Basically, I spent about 12 hours doing what I had planned to do over the span of 2 weeks. 
+
+How did it go?
+
+I walked into the exam, reassuring myself that at least I wouldn't lose any money if I failed this exam! Fortunately, I found the exam really easy and quite close to the modules in the learning paths. I had a good feeling while doing the exam. 
+
+I passed.
+
+Any advice/tips?
+
+A good background or understanding of AI concepts will help a lot. Pay extra attention to ALL the Azure tools/resources/services mentioned in the learning paths. In fact, try it out yourself using the labs.
+
+On the other hand, I found the Google PMLE exam a lot harder than the practice exams.  `
 }
 ];
