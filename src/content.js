@@ -207,6 +207,8 @@ The workflow is as follows:
 
 Quantum computing always sounded very complicated to me, but I found it surprisingly approachable. The hackathon was a great learning experience and I look forward to exploring more in this field.
 
-You can find the project here: https://qollab.xyz/explore/hackathon-2026/university-of-toronto`
+You can find the project here: [Qollab x IonQ local node](https://qollab.xyz/explore/hackathon-2026/university-of-toronto) and [Qollab x IonQ Hackathon Submission] (https://qollab.xyz/u/jumaana/grid-security-quantum?v=v1.0)
+
+Every project submitted was truly deserving of recognition, so taking home an award myself felt like the ultimate cherry on top!`
 }
 ];
